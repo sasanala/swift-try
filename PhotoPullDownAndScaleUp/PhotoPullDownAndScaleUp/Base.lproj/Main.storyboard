@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoPullDownAndScaleUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rzP-ey-bCv">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JzK-Db-8z2">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meal2" translatesAutoresizingMaskIntoConstraints="NO" id="kqt-Rk-kB7">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="340"/>
+                                            </imageView>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Prh-Md-vfL">
+                                                <rect key="frame" x="0.0" y="340" width="600" height="240"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="240" id="dpU-Co-5Ne"/>
+                                                </constraints>
+                                            </tableView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Prh-Md-vfL" firstAttribute="top" secondItem="kqt-Rk-kB7" secondAttribute="bottom" id="B0B-Eo-VFP"/>
+                                            <constraint firstAttribute="trailing" secondItem="kqt-Rk-kB7" secondAttribute="trailing" id="WeK-IJ-65y"/>
+                                            <constraint firstAttribute="bottom" secondItem="Prh-Md-vfL" secondAttribute="bottom" id="YzS-NZ-4DN"/>
+                                            <constraint firstItem="kqt-Rk-kB7" firstAttribute="top" secondItem="JzK-Db-8z2" secondAttribute="top" id="ZMn-bH-dEV"/>
+                                            <constraint firstItem="Prh-Md-vfL" firstAttribute="leading" secondItem="JzK-Db-8z2" secondAttribute="leading" id="bws-9L-Mfh"/>
+                                            <constraint firstItem="kqt-Rk-kB7" firstAttribute="leading" secondItem="JzK-Db-8z2" secondAttribute="leading" id="odq-Eg-LT3"/>
+                                            <constraint firstAttribute="trailing" secondItem="Prh-Md-vfL" secondAttribute="trailing" id="wyN-zZ-BXu"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="JzK-Db-8z2" firstAttribute="centerX" secondItem="rzP-ey-bCv" secondAttribute="centerX" id="3aZ-Uc-9eR"/>
+                                    <constraint firstItem="JzK-Db-8z2" firstAttribute="height" secondItem="rzP-ey-bCv" secondAttribute="height" id="4Al-Oe-DPh"/>
+                                    <constraint firstItem="JzK-Db-8z2" firstAttribute="centerY" secondItem="rzP-ey-bCv" secondAttribute="centerY" id="Elw-e7-35H"/>
+                                    <constraint firstItem="JzK-Db-8z2" firstAttribute="width" secondItem="rzP-ey-bCv" secondAttribute="width" id="Ex5-pA-v2H"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rzP-ey-bCv" secondAttribute="trailing" id="QUl-8M-1Kf"/>
+                            <constraint firstItem="rzP-ey-bCv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Ws7-zQ-pK6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rzP-ey-bCv" secondAttribute="bottom" id="lhg-O7-UCD"/>
+                            <constraint firstItem="rzP-ey-bCv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rYg-64-M2Z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageTopConstraint" destination="ZMn-bH-dEV" id="FSJ-fn-r2j"/>
+                        <outlet property="imageView" destination="kqt-Rk-kB7" id="vpt-6g-Uup"/>
+                        <outlet property="scrollView" destination="rzP-ey-bCv" id="Xeh-3c-CsQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="322"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="meal2" width="1056" height="1080"/>
+    </resources>
+</document>
