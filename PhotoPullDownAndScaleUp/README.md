@@ -5,7 +5,7 @@
 ### Features:
 
   * [x] pull down and the image scales up
-  * [ ] pull up and the image shifts with parallax
+  * [x] pull up and the image shifts with parallax
 
 
 ### Demo:
