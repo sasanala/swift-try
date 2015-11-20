@@ -62,6 +62,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageBottomConstraint" destination="B0B-Eo-VFP" id="KvN-0F-vGl"/>
                         <outlet property="imageTopConstraint" destination="ZMn-bH-dEV" id="FSJ-fn-r2j"/>
                         <outlet property="imageView" destination="kqt-Rk-kB7" id="vpt-6g-Uup"/>
                         <outlet property="scrollView" destination="rzP-ey-bCv" id="Xeh-3c-CsQ"/>

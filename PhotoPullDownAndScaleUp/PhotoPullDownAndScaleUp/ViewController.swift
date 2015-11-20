@@ -12,7 +12,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
+
     @IBOutlet weak var imageTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageBottomConstraint: NSLayoutConstraint!
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -22,10 +24,13 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
-        // scroll down
         if scrollView.contentOffset.y < 0 {
-            print(scrollView.contentOffset.y)
+            // scroll down
             imageTopConstraint.constant = scrollView.contentOffset.y
+        } else {
+            // scroll up
+            imageTopConstraint.constant = scrollView.contentOffset.y / 2
+            imageBottomConstraint.constant = -scrollView.contentOffset.y / 2
         }
     }
     
