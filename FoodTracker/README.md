@@ -87,5 +87,5 @@
   - `viewWillAppear()` — Intended for any operations that you want always to occur before the view becomes visible. Because a view’s visibility may be toggled or obscured by other views, this method is always called immediately before the content view appears onscreen.
   - `viewDidAppear()` — Intended for any operations that you want to occur as soon as the view becomes visible, such as fetching data or showing an animation. Because a view’s visibility may be toggled or obscured by other views, this method is always called immediately after the content view appears onscreen.
 - View Controller Life Cycle:
-  ![vclife][readmeResource/4_vclife_2x.png]
+  ![vclife](readmeResource/4_vclife_2x.png)
 - Attach a tap gesture recognizer (`UITapGestureRecognizer`) to the image view and make sure **User Interaction Enable** checkbox checked; otherwise, the tap gesture won't work.
