@@ -9,6 +9,8 @@
 - [x] 2. [Connect the UI to Code](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson3.html)
 - [ ] 3. [Work with View Controllers](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson4.html)
 
+---
+
 ### Lesson 1: Build a Basic UI
 
 #### Objective
@@ -29,6 +31,8 @@
 - The **outline view** — which appears on the left side of the canvas—lets you see a hierarchical representation of the objects in your storyboard.
 - Within that hierarchy, views enclosed within a view are called **subviews**, and the parent view that encloses a view is called its **superview**.
 - **intrinsic content size**: The minimum size needed to display all the content in a view without clipping or distorting that content.
+
+---
 
 ### Lesson 2: Connect the UI to Code
 
