@@ -1,13 +1,14 @@
 # Food Tracker
 
 - [Start Developing iOS Apps (Swift)](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/index.html) lessons supplied by Apple.
-
+- For running on iOS 8.0, I removed the StackView and re-layouted it.
 
 ### Outline
 
 - [x] 1. [Build a Basic UI](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson2.html)
 - [x] 2. [Connect the UI to Code](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson3.html)
-- [ ] 3. [Work with View Controllers](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson4.html)
+- [x] 3. [Work with View Controllers](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson4.html)
+- [ ] 4. [Implement a Custom Control](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson5.html)
 
 ---
 
@@ -62,6 +63,29 @@
     // MARK: Properties
 
     // MARK: Actions
-    
+
     // MARK: UITextFieldDelegate
 ```
+
+---
+
+### Lesson 3: Work with View Controllers
+
+### Objective
+
+- Understand the view controller life cycle and when its callbacks occurs, such as **viewDidLoad**, **viewWillAppear** and **viewDidAppear**
+- Pass data between view controllers
+- Dismiss a view controller
+- Use gesture recognizers as an additional level of generating events
+- Anticipate object behavior based on the **UIView/UIControl** class hierarchy
+- Use the asset catalog to add image assets to a project
+
+### Note
+
+- **UIViewController** methods get called as follows:
+  - `viewDidLoad()` — Called when the view controller’s content view (the top of its view hierarchy) is created and loaded from a storyboard. This method is intended for initial setup. However, because views may be purged due to limited resources in an app, there is no guarantee that it will be called only once.
+  - `viewWillAppear()` — Intended for any operations that you want always to occur before the view becomes visible. Because a view’s visibility may be toggled or obscured by other views, this method is always called immediately before the content view appears onscreen.
+  - `viewDidAppear()` — Intended for any operations that you want to occur as soon as the view becomes visible, such as fetching data or showing an animation. Because a view’s visibility may be toggled or obscured by other views, this method is always called immediately after the content view appears onscreen.
+- View Controller Life Cycle:
+  ![vclife][readmeResource/4_vclife_2x.png]
+- Attach a tap gesture recognizer (`UITapGestureRecognizer`) to the image view and make sure **User Interaction Enable** checkbox checked; otherwise, the tap gesture won't work.
