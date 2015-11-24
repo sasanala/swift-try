@@ -30,15 +30,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5p-ji-NYT">
-                                <rect key="frame" x="225" y="146" width="151" height="30"/>
-                                <state key="normal" title="Set Default Label Text"/>
-                                <connections>
-                                    <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t4J-kP-UfK"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3X1-hR-lru" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                <rect key="frame" x="180" y="714" width="240" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="BQ3-m0-nVB"/>
+                                    <constraint firstAttribute="height" constant="44" id="MTg-Vi-A0F"/>
+                                </constraints>
+                            </view>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="hSZ-H7-eI9">
-                                <rect key="frame" x="20" y="184" width="560" height="560"/>
+                                <rect key="frame" x="20" y="146" width="560" height="560"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hSZ-H7-eI9" secondAttribute="height" multiplier="280:117" id="cS6-pc-f1D"/>
@@ -58,20 +58,21 @@
                         <constraints>
                             <constraint firstItem="1bC-CJ-lbc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="2v5-k8-sPG"/>
                             <constraint firstItem="hSZ-H7-eI9" firstAttribute="width" secondItem="1bC-CJ-lbc" secondAttribute="width" id="2yp-XX-PAa"/>
-                            <constraint firstItem="F5p-ji-NYT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6HE-02-W3m"/>
                             <constraint firstItem="1bC-CJ-lbc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Oox-Tl-Kqh"/>
-                            <constraint firstItem="F5p-ji-NYT" firstAttribute="top" secondItem="1bC-CJ-lbc" secondAttribute="bottom" constant="8" symbolic="YES" id="ROg-f0-Rrt"/>
+                            <constraint firstItem="3X1-hR-lru" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pis-k7-iyl"/>
                             <constraint firstItem="0sK-MF-bGk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="Tj7-8Z-mgo"/>
                             <constraint firstItem="hSZ-H7-eI9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bHO-C5-B9w"/>
                             <constraint firstItem="1bC-CJ-lbc" firstAttribute="top" secondItem="0sK-MF-bGk" secondAttribute="bottom" constant="8" symbolic="YES" id="bel-kZ-d0n"/>
-                            <constraint firstItem="hSZ-H7-eI9" firstAttribute="top" secondItem="F5p-ji-NYT" secondAttribute="bottom" constant="8" symbolic="YES" id="dVb-dp-1kd"/>
+                            <constraint firstItem="hSZ-H7-eI9" firstAttribute="top" secondItem="1bC-CJ-lbc" secondAttribute="bottom" constant="8" symbolic="YES" id="hrM-vC-30b"/>
                             <constraint firstItem="0sK-MF-bGk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m1e-hQ-rJ0"/>
+                            <constraint firstItem="3X1-hR-lru" firstAttribute="top" secondItem="hSZ-H7-eI9" secondAttribute="bottom" constant="8" symbolic="YES" id="sPn-Oc-v5v"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mealNameLabel" destination="0sK-MF-bGk" id="sxk-eX-DlB"/>
                         <outlet property="nameTextField" destination="1bC-CJ-lbc" id="0CL-ru-8xP"/>
                         <outlet property="photoImageView" destination="hSZ-H7-eI9" id="Kx2-sD-9F3"/>
+                        <outlet property="ratingControl" destination="3X1-hR-lru" id="47H-0H-X1t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

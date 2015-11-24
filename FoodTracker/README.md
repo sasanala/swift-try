@@ -8,7 +8,12 @@
 - [x] 1. [Build a Basic UI](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson2.html)
 - [x] 2. [Connect the UI to Code](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson3.html)
 - [x] 3. [Work with View Controllers](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson4.html)
-- [ ] 4. [Implement a Custom Control](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson5.html)
+- [x] 4. [Implement a Custom Control](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson5.html)
+- [ ] 5. [Define Your Data Model](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson6.html)
+- [ ] 6. [Create a Table View](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson7.html)
+- [ ] 7. [Implement Navigation](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson8.html)
+- [ ] 8. [Implement Edit and Delete Behavior](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson9.html)
+- [ ] 9. [Persist Data](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson10.html)
 
 ---
 
@@ -89,3 +94,25 @@
 - View Controller Life Cycle:
   ![vclife](readmeResource/4_vclife_2x.png)
 - Attach a tap gesture recognizer (`UITapGestureRecognizer`) to the image view and make sure **User Interaction Enable** checkbox checked; otherwise, the tap gesture won't work.
+
+---
+
+### Lesson 4: Implement a Custom Controll
+
+### Objective
+
+- Create and associate custom source code files with elements in a storyboard
+- Define a custom class
+- Implement an initializer on a custom class
+- Use **UIView** as a container
+- Understand how to display views programmatically
+
+### Note
+
+- Initialization of `UIView`
+  - `init(frame:)` - for the frame, so that you can manually add the view to your UI
+  - `init?(coder:)` - for the storyboard
+- Every `UIView` subclass that implements an initializer must include an implementation of `init?(coder:)`.
+- A *property observer* observes and responds to changes in a property’s value. Property observers are called every time a property’s value is set, and can be used to perform work immediately before or after the value changes.
+
+---
