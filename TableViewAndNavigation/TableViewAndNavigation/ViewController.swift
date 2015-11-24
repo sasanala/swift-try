@@ -24,6 +24,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.dataSource = self
         
         // use line in the cell instead of separator
+        // it can set by storyboard too
         tableView.separatorStyle = .None
     }
 
