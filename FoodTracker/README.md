@@ -3,20 +3,20 @@
 - [Start Developing iOS Apps (Swift)](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/index.html) lessons supplied by Apple.
 
 
-## Lesson:
+### Lesson:
 
-  1. [x] [Build a Basic UI](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson2.html)
-  2. [ ] [Connect the UI to Code]()
+  [x] 1. [Build a Basic UI](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson2.html)
+  [ ] 2. [Connect the UI to Code]()
 
 
-## Demo:
+### Demo:
 
 ![Demo](xxx.gif)
 
 
-## Note:
+### Note:
 
-### Lesson 1:
+#### Lesson 1:
 
 - select the Auto-enable Return Key checkbox
 This change makes it impossible for the user to tap the Done key before typing text into the text field, ensuring that users can never enter an empty string as a meal name.
