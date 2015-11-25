@@ -2,6 +2,7 @@
 
 - [Start Developing iOS Apps (Swift)](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/index.html) lessons supplied by Apple.
 - For running on iOS 8.0, I removed the StackView and re-layouted it.
+- [Glossary](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html) - Here are terms you will encounter throughout this guide.
 
 ### Outline
 
