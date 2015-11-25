@@ -74,4 +74,5 @@ class RatingControl: UIView {
             button.selected = index < rating
         }
     }
+    
 }

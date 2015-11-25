@@ -190,8 +190,19 @@ func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexP
 
 ---
 
+### Lesson 8: Implement Edit and Delete Behavior
 
+#### Objective
 
+- Differentiate between push and modal navigation
+- Dismiss view controllers based on their presentation style
+- Understand when to use different type cast operators for downcasting
+- Leverage optional binding to check for complex conditions
+- Use segue identifiers to determine which segue is occurring
 
+#### Note
+- The type of dismissal depends on the type of presentation.
+  - If it was presented modally (using the Add button), it’ll be dismissed using `dismissViewControllerAnimated(_:completion:)`.
+  - If it was presented with push navigation (using a table view cell), it will be dismissed by the navigation controller that presented it (`navigationController!.popViewControllerAnimated(_)`).
 
-
+---
