@@ -136,3 +136,29 @@
 - Unit testing is an essential part of writing code because it helps you catch errors that you might otherwise overlook. As implied by their name, it’s important to keep unit tests modular. Each test should check for a specific, basic type of behavior.
 
 ---
+
+### Lesson 6: Create a Table View
+
+#### Objective
+
+- Create a second storyboard scene
+- Understand the key components of a table view
+- Create and design a custom table view cell
+- Understand the roles of table view delegates and data sources
+- Use an array to store and work with data
+- Display dynamic data in a table view
+
+#### Note
+
+- To display dynamic data, a table view needs two important helpers: a **data source** and a **delegate**.
+  - A table view **data source**, as implied by its name, supplies the table view with the data it needs to display.
+  - A table view **delegate** helps the table view manage cell selection, row heights, and other aspects related to displaying the data.
+- A functioning table view requires three table view data source methods.
+  ```
+func numberOfSectionsInTableView(tableView: UITableView) -> Int
+func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+  ```
+- Table views with a large number of rows display only a small fraction of their total items at a given time. It’s most efficient for table views to only ask for the cells for rows that are being displayed, and that’s what `tableView(_:cellForRowAtIndexPath:)` allows the table view to do.
+
+---
