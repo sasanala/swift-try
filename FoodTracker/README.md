@@ -76,7 +76,7 @@
 
 ### Lesson 3: Work with View Controllers
 
-### Objective
+#### Objective
 
 - Understand the view controller life cycle and when its callbacks occurs, such as **viewDidLoad**, **viewWillAppear** and **viewDidAppear**
 - Pass data between view controllers
@@ -85,7 +85,7 @@
 - Anticipate object behavior based on the **UIView/UIControl** class hierarchy
 - Use the asset catalog to add image assets to a project
 
-### Note
+#### Note
 
 - **UIViewController** methods get called as follows:
   - `viewDidLoad()` — Called when the view controller’s content view (the top of its view hierarchy) is created and loaded from a storyboard. This method is intended for initial setup. However, because views may be purged due to limited resources in an app, there is no guarantee that it will be called only once.
@@ -99,7 +99,7 @@
 
 ### Lesson 4: Implement a Custom Controll
 
-### Objective
+#### Objective
 
 - Create and associate custom source code files with elements in a storyboard
 - Define a custom class
@@ -107,12 +107,32 @@
 - Use **UIView** as a container
 - Understand how to display views programmatically
 
-### Note
+#### Note
 
 - Initialization of `UIView`
   - `init(frame:)` - for the frame, so that you can manually add the view to your UI
   - `init?(coder:)` - for the storyboard
 - Every `UIView` subclass that implements an initializer must include an implementation of `init?(coder:)`.
-- A *property observer* observes and responds to changes in a property’s value. Property observers are called every time a property’s value is set, and can be used to perform work immediately before or after the value changes.
+- A **property observer** observes and responds to changes in a property’s value. Property observers are called every time a property’s value is set, and can be used to perform work immediately before or after the value changes.
+
+---
+
+### Lesson 5: Define Your Data Model
+
+#### Objective
+
+- Create a data model
+- Write failable initializers on a custom class
+- Demonstrate a conceptual understanding of the difference between failable and nonfailable initializers
+- Test a data model by writing and running unit tests
+
+#### Note
+
+- By default, a Swift file imports the **Foundation** framework so you can work with Foundation data structures in your code. You’ll be working with a class from the UIKit framework, so you need to include UIKit in your import statement. Importing UIKit also gets you access to Foundation, so you can remove the redundant import to Foundation.
+- An initializer written like `init?()` is known as a **failable initializer**, which means that it’s possible for the initializer to return **nil** after initialization.
+- The XCTest framework, which *Unit Test Case Class* imports, is Xcode’s testing framework.
+  - The main types of tests you can write are **functional tests** (to check that everything is producing the values you expect) and **performance tests** (to check that your code is performing as fast as you expect it to).
+  - Start any method that you want to run as a test with “test” in the title.
+- Unit testing is an essential part of writing code because it helps you catch errors that you might otherwise overlook. As implied by their name, it’s important to keep unit tests modular. Each test should check for a specific, basic type of behavior.
 
 ---
