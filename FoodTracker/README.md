@@ -11,7 +11,7 @@
 - [x] 4. [Implement a Custom Control](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson5.html)
 - [x] 5. [Define Your Data Model](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson6.html)
 - [x] 6. [Create a Table View](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson7.html)
-- [ ] 7. [Implement Navigation](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson8.html)
+- [x] 7. [Implement Navigation](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson8.html)
 - [ ] 8. [Implement Edit and Delete Behavior](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson9.html)
 - [ ] 9. [Persist Data](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson10.html)
 
@@ -162,3 +162,35 @@ func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexP
 - Table views with a large number of rows display only a small fraction of their total items at a given time. It’s most efficient for table views to only ask for the cells for rows that are being displayed, and that’s what `tableView(_:cellForRowAtIndexPath:)` allows the table view to do.
 
 ---
+
+### Lesson 7: Implement Navigation
+
+#### Objective
+
+- Embed an existing view controller within a navigation controller in a storyboard
+- Create segues between view controllers
+- Edit the attributes of a segue in a storyboard using the Attributes inspector
+- Pass data between view controllers using the `prepareForSegue(_:sender:)` method
+- Perform an unwind segue
+- Use stack views to create robust, flexible layouts
+
+#### Note
+
+- Transitions between scenes are called **segues**.
+- A **navigation controller** manages transitions backward and forward through a series of view controllers.
+  - The set of view controllers managed by a particular navigation controller is called its **navigation stack**.
+  - The first item added to the stack becomes the **root view controller** and is never popped off (removed from) the navigation stack.
+  - Every controller on the **navigation stack** gets a navigation bar, which can contain controls for backward and forward navigation.
+- An **unwind segue** moves backward through one or more segues to return the user to an existing instance of a view controller.
+- Whenever a segue gets triggered, it provides a place for you to add your own code that gets executed. This method is called `prepareForSegue(_:sender:)`, and it gives you a chance to store data and do any necessary cleanup on the **source view controller** (the view controller that the segue is coming from).
+- **identity operator** - An operator (`===`) that tests whether two object references both refer to the same object instance.
+- **nil coalescing operator** - An operator (`??`) placed between two values, `a ?? b`, that unwraps an optional a if it contains a value, or returns a default value b if a is nil.
+- **optional type cast operator** - An operator (`as?`) that attempts a downcast and returns the result as an optional value.
+
+---
+
+
+
+
+
+
