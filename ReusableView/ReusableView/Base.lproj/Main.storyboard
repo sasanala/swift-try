@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -33,7 +34,7 @@
                                     <segue destination="uTx-2a-82i" kind="show" id="4JG-yG-BEA"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alK-E7-CJQ" customClass="MyNumberKeyboardView" customModule="ReusableView" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alK-E7-CJQ" customClass="MyKeyboardView" customModule="ReusableView" customModuleProvider="target">
                                 <rect key="frame" x="20" y="354" width="560" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -52,6 +53,9 @@
                             <constraint firstItem="YZT-OR-xbB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xkt-zM-Ejr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="keyboardView" destination="alK-E7-CJQ" id="78Y-hQ-Uvk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -84,8 +88,8 @@
                                     <segue destination="NBm-Eg-oAm" kind="unwind" unwindAction="unwindFromSecondView:" id="p9X-Pb-Eka"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rpn-U2-mX6" customClass="MyNumberKeyboardView" customModule="ReusableView" customModuleProvider="target">
-                                <rect key="frame" x="20" y="72" width="560" height="100"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rpn-U2-mX6" customClass="MyKeyboardView" customModule="ReusableView" customModuleProvider="target">
+                                <rect key="frame" x="90" y="72" width="420" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="N5Q-pZ-NoA"/>
@@ -96,12 +100,20 @@
                         <constraints>
                             <constraint firstItem="rpn-U2-mX6" firstAttribute="leading" secondItem="1n8-yn-1Ws" secondAttribute="leadingMargin" id="4vs-Oh-VTp"/>
                             <constraint firstItem="rpn-U2-mX6" firstAttribute="top" secondItem="DVi-hm-lWY" secondAttribute="bottom" constant="8" symbolic="YES" id="EHp-Um-9Jd"/>
+                            <constraint firstItem="rpn-U2-mX6" firstAttribute="width" secondItem="1n8-yn-1Ws" secondAttribute="width" multiplier="0.7" id="T12-Ml-Cde"/>
                             <constraint firstItem="DVi-hm-lWY" firstAttribute="centerX" secondItem="1n8-yn-1Ws" secondAttribute="centerX" id="VA8-VY-YUw"/>
                             <constraint firstItem="Iem-zI-CcG" firstAttribute="centerX" secondItem="1n8-yn-1Ws" secondAttribute="centerX" id="WCl-al-gFw"/>
                             <constraint firstItem="jK5-nX-wh7" firstAttribute="top" secondItem="Iem-zI-CcG" secondAttribute="bottom" constant="8" id="kGz-qj-Le2"/>
                             <constraint firstItem="DVi-hm-lWY" firstAttribute="top" secondItem="wZG-x0-kS9" secondAttribute="bottom" constant="8" id="lD0-xl-pck"/>
+                            <constraint firstItem="rpn-U2-mX6" firstAttribute="centerX" secondItem="1n8-yn-1Ws" secondAttribute="centerX" id="qyD-Fx-HJY"/>
                             <constraint firstItem="rpn-U2-mX6" firstAttribute="trailing" secondItem="1n8-yn-1Ws" secondAttribute="trailingMargin" id="rvY-eH-wCJ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4vs-Oh-VTp"/>
+                                <exclude reference="rvY-eH-wCJ"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2fw-ru-oTi" userLabel="First Responder" sceneMemberID="firstResponder"/>

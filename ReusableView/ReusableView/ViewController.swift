@@ -8,11 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MyKeyboardViewDelegate {
+
+    @IBOutlet weak var keyboardView: MyKeyboardView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        keyboardView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,6 +27,11 @@ class ViewController: UIViewController {
 
     @IBAction func unwindFromSecondView(sender: UIStoryboardSegue) {
         
+    }
+    
+    // MARK: MyNumberKeyboardViewDelegate
+    func myKeyboardViewDelegate(myNumberKeyboardView: MyKeyboardView, tappedText: String) {
+        print("tappedText = \(tappedText)")
     }
 
 }

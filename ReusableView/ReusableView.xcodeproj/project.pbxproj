@@ -12,8 +12,9 @@
 		48824E431C0C03C500485A72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48824E411C0C03C500485A72 /* Main.storyboard */; };
 		48824E451C0C03C500485A72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48824E441C0C03C500485A72 /* Assets.xcassets */; };
 		48824E481C0C03C500485A72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48824E461C0C03C500485A72 /* LaunchScreen.storyboard */; };
-		48824E511C0C078B00485A72 /* MyNumberKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48824E501C0C078B00485A72 /* MyNumberKeyboardView.xib */; };
-		48824E531C0C079D00485A72 /* MyNumberKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48824E521C0C079D00485A72 /* MyNumberKeyboardView.swift */; };
+		48824E511C0C078B00485A72 /* MyKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48824E501C0C078B00485A72 /* MyKeyboardView.xib */; };
+		48824E531C0C079D00485A72 /* MyKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48824E521C0C079D00485A72 /* MyKeyboardView.swift */; };
+		48824E551C0C0F3900485A72 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48824E541C0C0F3900485A72 /* CircleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +25,9 @@
 		48824E441C0C03C500485A72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48824E471C0C03C500485A72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48824E491C0C03C500485A72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		48824E501C0C078B00485A72 /* MyNumberKeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyNumberKeyboardView.xib; sourceTree = "<group>"; };
-		48824E521C0C079D00485A72 /* MyNumberKeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNumberKeyboardView.swift; sourceTree = "<group>"; };
+		48824E501C0C078B00485A72 /* MyKeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyKeyboardView.xib; sourceTree = "<group>"; };
+		48824E521C0C079D00485A72 /* MyKeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyKeyboardView.swift; sourceTree = "<group>"; };
+		48824E541C0C0F3900485A72 /* CircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,24 +60,25 @@
 		48824E3C1C0C03C500485A72 /* ReusableView */ = {
 			isa = PBXGroup;
 			children = (
-				48824E4F1C0C03CE00485A72 /* MyNumberKeyboardView */,
+				48824E4F1C0C03CE00485A72 /* MyKeyboardView */,
 				48824E3D1C0C03C500485A72 /* AppDelegate.swift */,
 				48824E3F1C0C03C500485A72 /* ViewController.swift */,
 				48824E411C0C03C500485A72 /* Main.storyboard */,
 				48824E441C0C03C500485A72 /* Assets.xcassets */,
 				48824E461C0C03C500485A72 /* LaunchScreen.storyboard */,
 				48824E491C0C03C500485A72 /* Info.plist */,
+				48824E541C0C0F3900485A72 /* CircleButton.swift */,
 			);
 			path = ReusableView;
 			sourceTree = "<group>";
 		};
-		48824E4F1C0C03CE00485A72 /* MyNumberKeyboardView */ = {
+		48824E4F1C0C03CE00485A72 /* MyKeyboardView */ = {
 			isa = PBXGroup;
 			children = (
-				48824E501C0C078B00485A72 /* MyNumberKeyboardView.xib */,
-				48824E521C0C079D00485A72 /* MyNumberKeyboardView.swift */,
+				48824E501C0C078B00485A72 /* MyKeyboardView.xib */,
+				48824E521C0C079D00485A72 /* MyKeyboardView.swift */,
 			);
-			name = MyNumberKeyboardView;
+			name = MyKeyboardView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48824E511C0C078B00485A72 /* MyNumberKeyboardView.xib in Resources */,
+				48824E511C0C078B00485A72 /* MyKeyboardView.xib in Resources */,
 				48824E481C0C03C500485A72 /* LaunchScreen.storyboard in Resources */,
 				48824E451C0C03C500485A72 /* Assets.xcassets in Resources */,
 				48824E431C0C03C500485A72 /* Main.storyboard in Resources */,
@@ -151,8 +154,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				48824E401C0C03C500485A72 /* ViewController.swift in Sources */,
-				48824E531C0C079D00485A72 /* MyNumberKeyboardView.swift in Sources */,
+				48824E531C0C079D00485A72 /* MyKeyboardView.swift in Sources */,
 				48824E3E1C0C03C500485A72 /* AppDelegate.swift in Sources */,
+				48824E551C0C0F3900485A72 /* CircleButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

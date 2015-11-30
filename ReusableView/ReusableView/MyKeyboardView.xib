@@ -3,10 +3,11 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyKeyboardView" customModule="ReusableView" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -15,40 +16,74 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tFd-jc-JXp">
                     <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdi-In-Aj3">
-                            <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdi-In-Aj3" customClass="CircleButton" customModule="ReusableView" customModuleProvider="target">
+                            <rect key="frame" x="75" y="225" width="150" height="150"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="vdi-In-Aj3" secondAttribute="height" multiplier="1:1" id="4YV-D6-RIi"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                             <state key="normal" title="55">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="buttonTapped:" destination="-1" eventType="touchUpInside" id="KZU-pC-Vt4"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="vdi-In-Aj3" firstAttribute="centerY" secondItem="tFd-jc-JXp" secondAttribute="centerY" id="3Rp-Lq-7nL"/>
                         <constraint firstAttribute="bottom" secondItem="vdi-In-Aj3" secondAttribute="bottom" id="5KL-PT-xZ7"/>
                         <constraint firstItem="vdi-In-Aj3" firstAttribute="top" secondItem="tFd-jc-JXp" secondAttribute="top" id="BgY-W5-9Cd"/>
+                        <constraint firstItem="vdi-In-Aj3" firstAttribute="centerX" secondItem="tFd-jc-JXp" secondAttribute="centerX" id="GNG-kF-1XX"/>
                         <constraint firstAttribute="trailing" secondItem="vdi-In-Aj3" secondAttribute="trailing" id="HsL-jl-YuJ"/>
                         <constraint firstItem="vdi-In-Aj3" firstAttribute="leading" secondItem="tFd-jc-JXp" secondAttribute="leading" id="c2L-Cq-mdo"/>
+                        <constraint firstItem="vdi-In-Aj3" firstAttribute="width" secondItem="tFd-jc-JXp" secondAttribute="width" multiplier="0.5" id="hPa-2j-6XN"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="5KL-PT-xZ7"/>
+                            <exclude reference="BgY-W5-9Cd"/>
+                            <exclude reference="HsL-jl-YuJ"/>
+                            <exclude reference="c2L-Cq-mdo"/>
+                        </mask>
+                    </variation>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aci-Ej-PHw">
                     <rect key="frame" x="300" y="0.0" width="300" height="600"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAP-8z-9Jd">
-                            <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAP-8z-9Jd" customClass="CircleButton" customModule="ReusableView" customModuleProvider="target">
+                            <rect key="frame" x="75" y="225" width="150" height="150"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="XAP-8z-9Jd" secondAttribute="height" multiplier="1:1" id="P53-rX-Kw6"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                             <state key="normal" title="66">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="buttonTapped:" destination="-1" eventType="touchUpInside" id="BQ4-gA-fIj"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="XAP-8z-9Jd" secondAttribute="trailing" id="30P-nV-BoW"/>
+                        <constraint firstItem="XAP-8z-9Jd" firstAttribute="centerX" secondItem="aci-Ej-PHw" secondAttribute="centerX" id="OYC-Mm-b3O"/>
                         <constraint firstItem="XAP-8z-9Jd" firstAttribute="leading" secondItem="aci-Ej-PHw" secondAttribute="leading" id="RHe-y2-5Xf"/>
+                        <constraint firstItem="XAP-8z-9Jd" firstAttribute="centerY" secondItem="aci-Ej-PHw" secondAttribute="centerY" id="Tqo-CB-lwl"/>
                         <constraint firstItem="XAP-8z-9Jd" firstAttribute="top" secondItem="aci-Ej-PHw" secondAttribute="top" id="a55-Vy-0K5"/>
+                        <constraint firstItem="XAP-8z-9Jd" firstAttribute="width" secondItem="aci-Ej-PHw" secondAttribute="width" multiplier="0.5" id="gLq-WD-p71"/>
                         <constraint firstAttribute="bottom" secondItem="XAP-8z-9Jd" secondAttribute="bottom" id="yd0-VX-0wO"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="30P-nV-BoW"/>
+                            <exclude reference="RHe-y2-5Xf"/>
+                            <exclude reference="a55-Vy-0K5"/>
+                            <exclude reference="yd0-VX-0wO"/>
+                        </mask>
+                    </variation>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
