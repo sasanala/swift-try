@@ -8,19 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		48824E3E1C0C03C500485A72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48824E3D1C0C03C500485A72 /* AppDelegate.swift */; };
-		48824E401C0C03C500485A72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48824E3F1C0C03C500485A72 /* ViewController.swift */; };
+		48824E401C0C03C500485A72 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48824E3F1C0C03C500485A72 /* FirstViewController.swift */; };
 		48824E431C0C03C500485A72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48824E411C0C03C500485A72 /* Main.storyboard */; };
 		48824E451C0C03C500485A72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48824E441C0C03C500485A72 /* Assets.xcassets */; };
 		48824E481C0C03C500485A72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48824E461C0C03C500485A72 /* LaunchScreen.storyboard */; };
 		48824E511C0C078B00485A72 /* MyKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48824E501C0C078B00485A72 /* MyKeyboardView.xib */; };
 		48824E531C0C079D00485A72 /* MyKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48824E521C0C079D00485A72 /* MyKeyboardView.swift */; };
 		48824E551C0C0F3900485A72 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48824E541C0C0F3900485A72 /* CircleButton.swift */; };
+		48824E591C0C3BEE00485A72 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48824E581C0C3BEE00485A72 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		48824E3A1C0C03C500485A72 /* ReusableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReusableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48824E3D1C0C03C500485A72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		48824E3F1C0C03C500485A72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		48824E3F1C0C03C500485A72 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		48824E421C0C03C500485A72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		48824E441C0C03C500485A72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48824E471C0C03C500485A72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -28,6 +29,7 @@
 		48824E501C0C078B00485A72 /* MyKeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyKeyboardView.xib; sourceTree = "<group>"; };
 		48824E521C0C079D00485A72 /* MyKeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyKeyboardView.swift; sourceTree = "<group>"; };
 		48824E541C0C0F3900485A72 /* CircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		48824E581C0C3BEE00485A72 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +62,13 @@
 		48824E3C1C0C03C500485A72 /* ReusableView */ = {
 			isa = PBXGroup;
 			children = (
-				48824E4F1C0C03CE00485A72 /* MyKeyboardView */,
 				48824E3D1C0C03C500485A72 /* AppDelegate.swift */,
-				48824E3F1C0C03C500485A72 /* ViewController.swift */,
 				48824E411C0C03C500485A72 /* Main.storyboard */,
+				48824E561C0C3B9900485A72 /* view */,
+				48824E571C0C3BCD00485A72 /* controller */,
 				48824E441C0C03C500485A72 /* Assets.xcassets */,
 				48824E461C0C03C500485A72 /* LaunchScreen.storyboard */,
 				48824E491C0C03C500485A72 /* Info.plist */,
-				48824E541C0C0F3900485A72 /* CircleButton.swift */,
 			);
 			path = ReusableView;
 			sourceTree = "<group>";
@@ -79,6 +80,24 @@
 				48824E521C0C079D00485A72 /* MyKeyboardView.swift */,
 			);
 			name = MyKeyboardView;
+			sourceTree = "<group>";
+		};
+		48824E561C0C3B9900485A72 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				48824E541C0C0F3900485A72 /* CircleButton.swift */,
+				48824E4F1C0C03CE00485A72 /* MyKeyboardView */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		48824E571C0C3BCD00485A72 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				48824E3F1C0C03C500485A72 /* FirstViewController.swift */,
+				48824E581C0C3BEE00485A72 /* SecondViewController.swift */,
+			);
+			name = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,9 +172,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48824E401C0C03C500485A72 /* ViewController.swift in Sources */,
+				48824E401C0C03C500485A72 /* FirstViewController.swift in Sources */,
 				48824E531C0C079D00485A72 /* MyKeyboardView.swift in Sources */,
 				48824E3E1C0C03C500485A72 /* AppDelegate.swift in Sources */,
+				48824E591C0C3BEE00485A72 /* SecondViewController.swift in Sources */,
 				48824E551C0C0F3900485A72 /* CircleButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

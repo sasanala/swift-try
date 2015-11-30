@@ -7,10 +7,10 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--First View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ReusableView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FirstViewController" customModule="ReusableView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -41,12 +41,22 @@
                                     <constraint firstAttribute="height" constant="200" id="kPE-w9-Mbo"/>
                                 </constraints>
                             </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ppZ-3H-9XU">
+                                <rect key="frame" x="20" y="72" width="560" height="274"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.79215686269999996" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="MWu-Kp-jgo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1LA-Do-pSx"/>
+                            <constraint firstItem="ppZ-3H-9XU" firstAttribute="top" secondItem="YZT-OR-xbB" secondAttribute="bottom" constant="8" symbolic="YES" id="1vO-Tk-9LF"/>
+                            <constraint firstItem="alK-E7-CJQ" firstAttribute="top" secondItem="ppZ-3H-9XU" secondAttribute="bottom" constant="8" symbolic="YES" id="2P5-zU-t39"/>
                             <constraint firstItem="alK-E7-CJQ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Inw-77-hFY"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MWu-Kp-jgo" secondAttribute="bottom" constant="8" id="UYW-r6-A0t"/>
+                            <constraint firstItem="ppZ-3H-9XU" firstAttribute="width" secondItem="alK-E7-CJQ" secondAttribute="width" id="bVa-zB-bfe"/>
+                            <constraint firstItem="ppZ-3H-9XU" firstAttribute="centerX" secondItem="alK-E7-CJQ" secondAttribute="centerX" id="l6L-vw-IWx"/>
                             <constraint firstItem="alK-E7-CJQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mOH-KQ-UJI"/>
                             <constraint firstItem="MWu-Kp-jgo" firstAttribute="top" secondItem="alK-E7-CJQ" secondAttribute="bottom" constant="8" symbolic="YES" id="mkg-Kr-xvc"/>
                             <constraint firstItem="YZT-OR-xbB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="rbv-ZS-jos"/>
@@ -55,16 +65,17 @@
                     </view>
                     <connections>
                         <outlet property="keyboardView" destination="alK-E7-CJQ" id="78Y-hQ-Uvk"/>
+                        <outlet property="textView" destination="ppZ-3H-9XU" id="Ag8-SW-PuT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="245" y="337"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="wes-i3-nhu">
             <objects>
-                <viewController id="uTx-2a-82i" sceneMemberID="viewController">
+                <viewController id="uTx-2a-82i" customClass="SecondViewController" customModule="ReusableView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wZG-x0-kS9"/>
                         <viewControllerLayoutGuide type="bottom" id="jK5-nX-wh7"/>
@@ -95,18 +106,28 @@
                                     <constraint firstAttribute="height" constant="100" id="N5Q-pZ-NoA"/>
                                 </constraints>
                             </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tZ2-E3-0Fb">
+                                <rect key="frame" x="90" y="180" width="420" height="374"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="rpn-U2-mX6" firstAttribute="leading" secondItem="1n8-yn-1Ws" secondAttribute="leadingMargin" id="4vs-Oh-VTp"/>
+                            <constraint firstItem="tZ2-E3-0Fb" firstAttribute="top" secondItem="rpn-U2-mX6" secondAttribute="bottom" constant="8" symbolic="YES" id="A3P-jY-6lC"/>
                             <constraint firstItem="rpn-U2-mX6" firstAttribute="top" secondItem="DVi-hm-lWY" secondAttribute="bottom" constant="8" symbolic="YES" id="EHp-Um-9Jd"/>
                             <constraint firstItem="rpn-U2-mX6" firstAttribute="width" secondItem="1n8-yn-1Ws" secondAttribute="width" multiplier="0.7" id="T12-Ml-Cde"/>
                             <constraint firstItem="DVi-hm-lWY" firstAttribute="centerX" secondItem="1n8-yn-1Ws" secondAttribute="centerX" id="VA8-VY-YUw"/>
                             <constraint firstItem="Iem-zI-CcG" firstAttribute="centerX" secondItem="1n8-yn-1Ws" secondAttribute="centerX" id="WCl-al-gFw"/>
+                            <constraint firstItem="Iem-zI-CcG" firstAttribute="top" secondItem="tZ2-E3-0Fb" secondAttribute="bottom" constant="8" symbolic="YES" id="XQb-CS-Z0b"/>
                             <constraint firstItem="jK5-nX-wh7" firstAttribute="top" secondItem="Iem-zI-CcG" secondAttribute="bottom" constant="8" id="kGz-qj-Le2"/>
                             <constraint firstItem="DVi-hm-lWY" firstAttribute="top" secondItem="wZG-x0-kS9" secondAttribute="bottom" constant="8" id="lD0-xl-pck"/>
+                            <constraint firstItem="tZ2-E3-0Fb" firstAttribute="centerX" secondItem="rpn-U2-mX6" secondAttribute="centerX" id="oo4-bI-yuU"/>
                             <constraint firstItem="rpn-U2-mX6" firstAttribute="centerX" secondItem="1n8-yn-1Ws" secondAttribute="centerX" id="qyD-Fx-HJY"/>
                             <constraint firstItem="rpn-U2-mX6" firstAttribute="trailing" secondItem="1n8-yn-1Ws" secondAttribute="trailingMargin" id="rvY-eH-wCJ"/>
+                            <constraint firstItem="tZ2-E3-0Fb" firstAttribute="width" secondItem="rpn-U2-mX6" secondAttribute="width" id="uMB-sm-f8n"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -115,6 +136,10 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="keyboardView" destination="rpn-U2-mX6" id="jER-Hl-fbj"/>
+                        <outlet property="textView" destination="tZ2-E3-0Fb" id="JPr-dB-nSR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2fw-ru-oTi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="NBm-Eg-oAm" userLabel="Exit" sceneMemberID="exit"/>

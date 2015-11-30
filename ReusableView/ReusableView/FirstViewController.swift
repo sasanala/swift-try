@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FirstViewController.swift
 //  ReusableView
 //
 //  Created by 竹田 on 2015/11/30.
@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController, MyKeyboardViewDelegate {
+class FirstViewController: UIViewController, MyKeyboardViewDelegate {
 
+    @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var keyboardView: MyKeyboardView!
 
     override func viewDidLoad() {
@@ -17,10 +18,11 @@ class ViewController: UIViewController, MyKeyboardViewDelegate {
         
         keyboardView.delegate = self
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        textView.text = ""
     }
     
     // MARK: Actions
@@ -30,8 +32,9 @@ class ViewController: UIViewController, MyKeyboardViewDelegate {
     }
     
     // MARK: MyNumberKeyboardViewDelegate
+
     func myKeyboardViewDelegate(myNumberKeyboardView: MyKeyboardView, tappedText: String) {
-        print("tappedText = \(tappedText)")
+        textView.text = textView.text + tappedText
     }
 
 }
