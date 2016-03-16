@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TryDoneDatePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IPi-Wb-cxj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7rv-wF-wmH" customClass="FTDateTextField" customModule="TryDoneDatePicker" customModuleProvider="target">
+                                <rect key="frame" x="20" y="285" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mZQ-hU-SEM" customClass="FTFoodUnitTextField" customModule="TryDoneDatePicker" customModuleProvider="target">
+                                <rect key="frame" x="20.5" y="235" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="7rv-wF-wmH" secondAttribute="trailing" id="1hp-kO-0aA"/>
+                            <constraint firstItem="7rv-wF-wmH" firstAttribute="leading" secondItem="IPi-Wb-cxj" secondAttribute="leadingMargin" id="7YP-6D-xZY"/>
+                            <constraint firstItem="7rv-wF-wmH" firstAttribute="top" secondItem="mZQ-hU-SEM" secondAttribute="bottom" constant="20" id="Shx-20-Tdz"/>
+                            <constraint firstItem="7rv-wF-wmH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Uc3-Zf-Kel"/>
+                            <constraint firstItem="7rv-wF-wmH" firstAttribute="centerY" secondItem="IPi-Wb-cxj" secondAttribute="centerY" id="Vfb-Xe-8cJ"/>
+                            <constraint firstItem="7rv-wF-wmH" firstAttribute="trailing" secondItem="IPi-Wb-cxj" secondAttribute="trailingMargin" id="Wc0-eZ-wAH"/>
+                            <constraint firstItem="7rv-wF-wmH" firstAttribute="leading" secondItem="IPi-Wb-cxj" secondAttribute="leadingMargin" id="WjR-4v-xPA"/>
+                            <constraint firstItem="mZQ-hU-SEM" firstAttribute="width" secondItem="7rv-wF-wmH" secondAttribute="width" id="ocC-F1-31v"/>
+                            <constraint firstItem="mZQ-hU-SEM" firstAttribute="centerX" secondItem="7rv-wF-wmH" secondAttribute="centerX" id="zpP-Yk-kpR"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7YP-6D-xZY"/>
+                                <exclude reference="Uc3-Zf-Kel"/>
+                                <exclude reference="Wc0-eZ-wAH"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="7rv-wF-wmH" id="Yq6-sr-C21"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
